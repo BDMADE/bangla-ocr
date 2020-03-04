@@ -6,6 +6,7 @@ tar -xf v0.tar.gz
 mv ocr_tutorial-0/* ../home/
 cd ../home
 sudo apt-get install -y python-virtualenv
+sudo apt-get install -y virtualenv
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
