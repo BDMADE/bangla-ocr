@@ -1,10 +1,8 @@
 #!/bin/sh
 
 # Setup App
-wget https://github.com/rhgraysonii/ocr_tutorial/archive/v0.tar.gz
-tar -xf v0.tar.gz
-mv ocr_tutorial-0/* ../home/
-cd ../home
+git clone https://github.com/BDMADE/bangla-ocr.git
+cd bangla-ocr
 sudo apt-get install -y python-virtualenv
 sudo apt-get install -y virtualenv
 virtualenv env

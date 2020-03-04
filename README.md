@@ -1,6 +1,17 @@
-Welcome!
+# Welcome! Bangla OCR.
 
-Check out the blog post here >> https://realpython.com/blog/python/setting-up-a-simple-ocr-server/
+# How to setup virtual ENV
+$ cd bangla-ocr
+$ virtualenv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
+
+# Run server
+$ cd flask_server
+$ python app.py
+
+
+
 
 
 
