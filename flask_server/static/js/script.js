@@ -17,14 +17,15 @@ $(function() {
       contentType: "application/json",
       dataType: "json",
       data : JSON.stringify({ "image_url" : value }),
-      success: function(result) {
-        console.log(result);
-        $("#post-form").hide()
-        $("#retry").show()
-        $("#results").show()
-        $("#results").html("<h3>Image</h3><img src="+
-          value+" style='max-width: 400px;'><br><h3>Results</h3><div class='well'>"+
-          result["output"]+"</div>");
+      success: function(result) {        
+        final_result = result["output"].replace(/\n/g, "<br />");
+        $("#post-form").hide();
+        $("#retry").show();
+        $("#results").show();
+        console.log(value);
+        console.log(final_result);
+        $("#results").html("<h3>Image</h3><img src="+value+" style='max-width: 400px;'>");
+        $("#resultsData").html("<h3>Result</h3><div class='resultData'>"+final_result+"</div>");
       },
       error: function(error) {
         console.log(error);
